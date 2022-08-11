@@ -28,10 +28,10 @@ public class StudentService {
         return student;
     }
 
-//    public Student getByStudentFirstLetter(String studentFirstLetter) {
-//        Student student = studentRepository.findAll();
-//        return student;
-//    }
+    public Student getByStudentFirstLetter(Long studentId) {
+        Student student = studentRepository.findById(studentId).orElse(new Student());
+        return student;
+    }
 
 }
 
